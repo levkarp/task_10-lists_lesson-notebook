@@ -12,28 +12,29 @@ public class Main {
         //        ArrayList<String> list = new ArrayList<>();
         //[1 1,3 _ _ _ 4 5 _ _  __  _ _ __ ]
 
-         List<String> list = new LinkedList<>();
+        List<String> list = new LinkedList<>();
 
         // add {..} ->  <-{...} -> <- {....} ->  <-add{..}
-
-
 
 
         list.add("Лев");
         list.add("Мурат");
         list.add("Вальтер");
-        list.set(0,"Джек");
+        list.set(0, "Джек");
         System.out.println(list.get(1));
 
 //
-        for(String name :list) {
+
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+
+            String next = iterator.next();
+            System.out.println(next);
+            iterator.remove();
+        }
+        for (String name : list) {
             System.out.println(name);
         }
-
-
-
-
-
 
 
 //
